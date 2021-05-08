@@ -21,13 +21,243 @@ body {
     font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
-}
+ }
 
 .obal {
     width: 960px; /* obsah stránky je omezený do pruhu širokého 960px */
     margin: 0 auto; /* pruh je na stránce vycentrovaný */
     background: white;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    max-width: 100%;
 }
 
 /* ----- zde začni psát vlastní CSS ----- */
+
+.foto {
+    display: none;
+}
+
+.pismo-bila {
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color:#48418e;
+    padding: 1rem;
+}
+
+a:hover {
+    color: white;
+    background-color:#48418e;
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.appka {
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 400;
+}
+
+.horni {
+    background-image: linear-gradient(hsla(0 0% 0% / 0.2), hsla(0 0% 0% / 0.2)),
+    url('images/pozadi.jpg');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+.nadpis, .popis {
+       margin: 0rem;
+}
+
+.tlacitko {
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 0.5rem 1.5rem;
+    margin: 0.5rem;
+}
+
+.tlacitko1 {
+    background-color: #48418e;
+    margin-right: 1rem;
+    transition: background-color 0.5s;
+}
+
+.tlacitko1:hover {
+    background-color: unset;
+}
+
+.tlacitko2 {
+    background-color: unset;
+    transition: background-color 0.5s;
+}
+
+.tlacitko2:hover {
+    background-color: #48418e;
+}
+
+.obal2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.spodni {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+.sloupec {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.horni p {
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+.spodni p {
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+.nazev {
+    color: #48418e;
+    text-align: center;
+}
+
+footer {
+    background-color:#48418e;
+    color: white;
+    text-align: center;
+    padding-top: 0.1rem;
+    padding-bottom: 0.1rem;
+}
+
+.obrazek:hover {
+    animation-name: zvetseni;
+    animation-duration: 1s;
+}
+
+@keyframes zvetseni {
+
+    from {
+        transform:scale(1,1)
+    }
+
+    50% {
+        transform: scale(1.2, 1.2);
+    }
+
+      to {
+        transform: scale(1,1);
+    }
+}
+
+@media screen and (min-width: 580px) and (max-width: 767px) {
+    .menu {
+        display: inline-block;
+        padding: 1rem;
+    }
+
+    .obal2 {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .spodni {
+        flex-direction: row;
+        justify-content: space-between;
+        padding:1rem;
+    }
+
+    .sloupec {
+        margin: 1rem;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .menu {
+        display: inline-block;
+        padding: 1rem;
+    }
+
+    .horni {
+        position: relative;
+    }
+
+    .foto {
+        display:inline-block;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+
+    .obal2 {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .spodni {
+        flex-direction: row;
+        justify-content: space-between;
+        padding:1rem;
+    }
+
+    .sloupec {
+        margin: 1rem;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .menu {
+        display: inline-block;
+        padding: 1rem;
+    }
+
+    .horni {
+        position: relative;
+    }
+
+    .foto {
+        display:inline-block;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+
+    .obal2 {
+        display: flex;
+        flex-direction: row;
+    }
+      
+    .spodni {
+        flex-direction: row;
+        justify-content: space-between;
+        padding:1rem;
+    }
+
+    .sloupec {
+        margin: 1rem;
+    }
+}
+
+
+
+
+
+
+
